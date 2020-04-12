@@ -1,0 +1,7 @@
+/.idea/.gitignore
+/.idea/Coding-Gym-Java.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/build/
+*iml
