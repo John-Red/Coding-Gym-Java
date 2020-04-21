@@ -17,14 +17,9 @@ public class Employee {
     }
 
     public String toString() {
-        return /*"Name: " +*/ this.getPerson().getFirstName();
-//                + " Salary: " + this.getSalary();
+        return this.getPerson().getFirstName();
     }
-//    public String toString() {
-//        return "Person: " + this.getPerson() + "\n "
-//                + "Job history: " + this.getJobHistory() + "\n "
-//                + "Salary: " + this.getSalary();
-//    }
+
 
     public Person getPerson() {
         return person;

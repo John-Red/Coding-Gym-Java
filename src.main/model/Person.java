@@ -15,11 +15,6 @@ public class Person {
     public String toString(){
         return this.getFirstName();
     }
-//    public String toString() {
-//        return "First name: " + this.firstName + "\n "
-//                + "Last name: " + this.lastName + "\n "
-//                + "Age: " + this.age;
-//    }
 
     public String getFirstName() {
         return firstName;
