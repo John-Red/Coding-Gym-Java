@@ -1,9 +1,5 @@
 package model;
 
-import model.Employee;
-import model.JobHistory;
-import model.Person;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

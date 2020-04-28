@@ -1,5 +1,12 @@
 package exercise7;
 
+import model.Employee;
+import model.EmployeeFactory;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class App {
 
     // Вывести сотрудников, сгруппированных по первым компаниям, в которых они работали
@@ -10,6 +17,17 @@ public class App {
     //            ITU-T: Kevin)
 
     public static void main(String[] args) {
+
+        final List<List<Employee>> allEmployees = EmployeeFactory.getAllEmployees();
+
+        allEmployees.stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.groupingBy(employee -> employee.getJobHistory().get(0).getEmployer()))
+                .forEach((company, employee) -> System.out.println(company + " " + employee
+                        .stream()
+                        .map(employ -> employ.getPerson().getFirstName())
+                        .collect(Collectors.joining(" and "))));
+
 
     }
 }

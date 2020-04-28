@@ -26,6 +26,7 @@ public class App {
 
     private static List<String> countStrings(String[] strings) {
 
+        // Понимать как работают параметры метода Collectors.toMap
         return Arrays.stream(strings).collect(Collectors.toMap(k->k,v->1, Integer::sum))
                 .entrySet()
                 .stream()

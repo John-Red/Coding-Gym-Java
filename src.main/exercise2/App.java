@@ -2,6 +2,7 @@ package exercise2;
 
 import model.Employee;
 import model.EmployeeFactory;
+import model.JobHistory;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class App {
 
         employees.stream().filter(emp -> emp.getJobHistory()
                 .stream()
-                .map(job-> job.getEmployer())
+                .map(JobHistory::getEmployer)
                 .anyMatch("epam"::equals))
                 .forEach(System.out::println);
     }
